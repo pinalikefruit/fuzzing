@@ -1,20 +1,20 @@
 # Fuzzing Zone
 
-Here you can find all important concepts, excersices, implementation, step-by-step increasing the level around Fuzzing.  
+Here you can find all important concepts, exercises, implementations, and step-by-step guides for increasing your knowledge around Fuzzing.
 
 ## What is Fuzzing ?
 
-Fuzzing is a technique where the goals is to break the invariants of the contract, and this tecnhique try with invalid, unexpected and random data.
+Fuzzing is a technique where the goal is to break the invariants of the contract by trying invalid, unexpected, and random data.
 
-The beneficial is the contract is expose to extreme condition and help to find uncover hard-to-detect vulnerabilities. 
+The benefit is that the contract is exposed to extreme conditions, helping to uncover hard-to-detect vulnerabilities.
 
 ## What is an Invariant?
 
-There are properties of our system that should be always hold true. 
+Invariants are properties of our system that should always hold true.
 
-E.g. Supply of tokens > the amount of token to mint 
+E.g., Supply of tokens > the amount of tokens to mint.
 
-Defining a good invariants is the key, is when you really understand and can explain in plain English what does the protocol and what doesn't. You can get the idea from whitepaper(abstracted), docs or solidity code base.
+Defining good invariants is key; it shows that you truly understand and can explain in plain English what the protocol does and what it doesn't. You can get the idea from whitepapers (abstracted), docs, or the Solidity codebase.
 
 ### Different types: 
 
@@ -33,27 +33,34 @@ Defining a good invariants is the key, is when you really understand and can exp
    
 ## How build a fuzzing test ? 
 
-1. Understand what the invariant are. 
-2. Write funcitons that can execute.
-
+1. Understand what the invariants are.
+2. Write functions that can execute them.
+   
 ## Methods 
 
 1. **Stateless Fuzzing (Easiest)**
 
-   This approach is useful when you have a _function that has an invariant_.  
-   Randonm data to one function, where the state of the previous run is discarded. 
+   This approach is useful when you have a _function that has an invariant_.
+   Random data to one function, where the state of the previous run is discarded.
 
 2. **Stateful Fuzzing - Open / Unguided (A little harder)**
    
-   Random data & random functions call to many functions, where the final state of your previous run in the starting state of your next run.
+   Random data & random function calls to many functions, where the final state of your previous run is the starting state of your next run.
 
-   This approach send random data with random call, be is depende a lot of restiction is difficult to find a bugs. 
+   This approach sends random data with random calls, but depending on the number of restrictions, it can be difficult to find bugs. 
 
 3. **Stateful Fuzzing - Handler method/ Guided (Harder)**
    
-   This method use the same base the open, but handler the restrict our random inputs to set of specific random actions that can be called. 
+   This method uses the same base as the open method but handles the restrictions on our random inputs to a set of specific random actions that can be called.
 
 4. **Formal Verification w/ Halmos (Hardest)**
+
+## Fuzzing tools 
+
+* [Foundry](https://book.getfoundry.sh/) 
+  * [Getting Started](./docs/foundry.md)
+  * [Exercise](./docs/foundry-exercise.md)
+* Echidna
 
 ### References
 
@@ -61,7 +68,7 @@ Defining a good invariants is the key, is when you really understand and can exp
 
 
 ### Open to Contributions
-If you see some error, or want to add an observation, please create an issue or a PR. References are greatly appreciated. You can also contact me on Twitter at @pinalikefruit.
+If you see any errors or want to add an observation, please create an issue or a PR. References are greatly appreciated. You can also contact me on Twitter at @pinalikefruit.
 
 ### Disclaimer
-Take the observations in this repository as a guideline and kickstarter to make fuzzing test.
+Take the observations in this repository as guidelines and a kickstarter to make fuzzing tests. This repo may contain errors or incorrect assumptions. If you find any, please help by creating an issue or a PR.
