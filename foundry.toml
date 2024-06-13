@@ -7,11 +7,10 @@ libs = ["lib"]
 
 
 [fuzz]
-runs = 256 # will be supplied random data from 0 to uint256.max(), as many times as you've conifigured runs
+runs = 1000 # indicates the number of randomly generated inputs from 0 to uint256.max()
 #seed = '0x2'
 
-# [invariant]
+[invariant]
+fail_on_revert = true # if we want to revert when they revert, If is fail whe dont care and throw a panic error
 # runs = 64
 # depth = 32 # Number of functions called in a single command
-# fail_on_revert = true # if we want to revert when they revert
-# # If is fail whe dont care and throw a panic error

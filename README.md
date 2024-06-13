@@ -2,9 +2,9 @@
 
 Here you can find all important concepts, exercises, implementations, and step-by-step guides for increasing your knowledge around Fuzzing.
 
-## What is Fuzzing ?
+## What is Fuzz Test ?
 
-Fuzzing is a technique where the goal is to break the invariants of the contract by trying invalid, unexpected, and random data.
+Fuzzing is a technique where the goal is to break the invariants of the contract by trying to break specific assertions with random data.
 
 The benefit is that the contract is exposed to extreme conditions, helping to uncover hard-to-detect vulnerabilities.
 
@@ -12,7 +12,7 @@ The benefit is that the contract is exposed to extreme conditions, helping to un
 
 Invariants are properties of our system that should always hold true.
 
-E.g., Supply of tokens > the amount of tokens to mint.
+E.g. A user should never be able to withdraw more money than they deposited
 
 Defining good invariants is key; it shows that you truly understand and can explain in plain English what the protocol does and what it doesn't. You can get the idea from whitepapers (abstracted), docs, or the Solidity codebase.
 
@@ -34,7 +34,7 @@ Defining good invariants is key; it shows that you truly understand and can expl
 ## How build a fuzzing test ? 
 
 1. Understand what the invariants are.
-2. Write functions that can execute them.
+2. Test functions that can execute them.
    
 ## Methods 
 
@@ -65,6 +65,9 @@ Defining good invariants is key; it shows that you truly understand and can expl
 ### References
 
 * [Cyfrin Updraft](https://updraft.cyfrin.io/)
+
+###  Lecture
+* [What is fuzzing (fuzz tests)](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)
 
 
 ### Open to Contributions
