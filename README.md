@@ -16,7 +16,7 @@ E.g. A user should never be able to withdraw more money than they deposited
 
 Defining good invariants is key; it shows that you truly understand and can explain in plain English what the protocol does and what it doesn't. You can get the idea from whitepapers (abstracted), docs, or the Solidity codebase.
 
-### Different types: 
+### Types of Invariants: 
 
 1. Functional-level invariants: 
    1. They are stateless and can be tested in insolation. 
@@ -30,11 +30,17 @@ Defining good invariants is key; it shows that you truly understand and can expl
 4. State transition
    1. Ensure that changes occur in the correct order and conditions without desviations 
    2. Verified to occur only against specific functions, calls variable rules to prevent undesired state changes. 
+5. Variable Transitions
+   1. This verification ensures, similarly to state transitions, that variables change consistently.
+   2. Different variables may have distinct change patterns, with some required to change only in specific directions for the system's coherence.
    
 ## How build a fuzzing test ? 
 
-1. Understand what the invariants are.
-2. Test functions that can execute them.
+1. Define Invariants from Documentation
+2. Write Your Properties in Plain English (PROPERTIES.md)
+3. Categore Your Properties
+4. Prioritize Your Invariants (A good strategy can be to start with the "easier to implement" and "most impactful" first)
+5. Writing Solidity Code for Invariants
    
 ## Methods 
 
@@ -65,9 +71,11 @@ Defining good invariants is key; it shows that you truly understand and can expl
 ### References
 
 * [Cyfrin Updraft](https://updraft.cyfrin.io/)
+* [All things fuzzy](https://allthingsfuzzy.substack.com/)
 
 ###  Lecture
 * [What is fuzzing (fuzz tests)](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)
+* [Quick tips to start your next invariant test campaign](https://allthingsfuzzy.substack.com/p/quick-tips-to-start-your-next-invariant)
 
 
 ### Open to Contributions
