@@ -7,11 +7,12 @@ libs = ["lib"]
 
 
 [fuzz] # Stateless
-runs = 100 # indicates the number of randomly generated inputs from 0 to uint256.max()
+runs = 1000 # indicates the number of randomly generated inputs from 0 to uint256.max()
 seed = '0x2' # Change the seed change the rando generator
+
 
 [invariant] # Stateful
 fail_on_revert = true # if we want to revert when they revert, If is fail whe dont care and throw a panic error
 #Note: It's often better to use vm.assume or bound to set parameter boundaries.  Setting "fail_on_revert" to false can cause you to think your fuzz tests are doing more than they are.
 runs = 1000
-depth = 32 # Number of functions called in a single command
+depth = 15 # Number of functions called in a single command

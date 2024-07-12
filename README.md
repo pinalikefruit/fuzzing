@@ -2,13 +2,13 @@
 
 Here you can find all important concepts, exercises, implementations, and step-by-step guides for increasing your knowledge around Fuzzing.
 
-## What is Fuzz Test ?
+## What is Fuzz Test
 
 Fuzzing is a technique where the goal is to break the invariants of the contract by trying to break specific assertions with random data.
 
 The benefit is that the contract is exposed to extreme conditions, helping to uncover hard-to-detect vulnerabilities.
 
-## What is an Invariant?
+## What is an Invariant
 
 Invariants are properties of our system that should always hold true.
 
@@ -72,14 +72,20 @@ Defining good invariants is key; it shows that you truly understand and can expl
 
 * [Cyfrin Updraft](https://updraft.cyfrin.io/)
 * [All things fuzzy](https://allthingsfuzzy.substack.com/)
+* [Invariant testing](https://book.getfoundry.sh/forge/invariant-testing)
 
 ###  Lecture
 * [What is fuzzing (fuzz tests)](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)
 * [Quick tips to start your next invariant test campaign](https://allthingsfuzzy.substack.com/p/quick-tips-to-start-your-next-invariant)
 
+### Tutorial 
 
+* [Invariant Testing WETH With Foundry](https://mirror.xyz/horsefacts.eth/Jex2YVaO65dda6zEyfM_-DXlXhOWCAoSpOx5PLocYgw) 
+  
 ### Open to Contributions
-If you see any errors or want to add an observation, please create an issue or a PR. References are greatly appreciated. You can also contact me on Twitter at @pinalikefruit.
+If you see any errors or want to add an observation, please create an issue or a PR. References are greatly appreciated. You can also contact me on Twitter at [@pinalikefruit](https://x.com/pinalikefruit).
 
 ### Disclaimer
 Take the observations in this repository as guidelines and a kickstarter to make fuzzing tests. This repo may contain errors or incorrect assumptions. If you find any, please help by creating an issue or a PR.
+
+
